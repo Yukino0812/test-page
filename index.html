@@ -2,10 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sample</title>
+    <title>demo</title>
+    <script src="skiko.js"> </script>
+    <link type="text/css" rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div id="root"></div>
-<script src="compose-web-test.js"></script>
+<div>
+    <div>
+        <h2>Web Url Href Test</h2>
+        <input id="href-input" style="width: 200px;" value="https://www.baidu.com">
+        <button id="href-go">GO</button>
+    </div>
+    <br>
+    <div><canvas id="ComposeTarget" width="800" height="600"></canvas></div>
+</div>
+<script>
+    document.getElementById("href-go").onclick = function() {
+        window.location.href = document.getElementById("href-input").value
+    }
+</script>
+<script src="jsApp.js"> </script>
 </body>
 </html>
